@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://badodll41tjtx"]
+
+[ext_resource type="MeshLibrary" uid="uid://ou4i6ma4tkdm" path="res://assets/Free Modular Low Poly Dungeon by rgsdev/toles_occluder.tres" id="1_q743y"]
+[ext_resource type="PackedScene" uid="uid://dqdyvi86lls4j" path="res://prefabs/torch.tscn" id="2_fr15q"]
+[ext_resource type="PackedScene" uid="uid://cmeaxielffb1e" path="res://prefabs/door.tscn" id="3_vlwy4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q743y"]
+size = Vector3(8.4, 3.15, 8.4)
+
+[node name="Chunk1" type="Node3D"]
+
+[node name="Floor" type="GridMap" parent="."]
+mesh_library = ExtResource("1_q743y")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 14, 2, 0, 14, 4, 0, 14, 4, 2, 14, 2, 2, 14, 0, 2, 14, 0, 4, 14, 2, 4, 14, 4, 4, 14, 0, 6, 14, 2, 6, 14, 4, 6, 14, 6, 6, 14, 6, 4, 14, 6, 2, 14, 6, 0, 14, 196608, 0, 14, 196608, 2, 14, 196608, 4, 14, 196608, 6, 14, 196610, 0, 14, 196610, 2, 14, 196610, 4, 14, 196610, 6, 14, 196612, 0, 14, 196612, 2, 14, 196612, 4, 14, 196612, 6, 14, 196614, 0, 14, 196614, 2, 14, 196614, 4, 14, 196614, 6, 14)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="HorizontalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_q743y")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 77, 6, 0, 77, 0, 8, 77, 2, 8, 77, 4, 8, 77, 6, 8, 77)
+}
+
+[node name="VerticalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_q743y")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 1441869, 0, 2, 1441869, 0, 4, 1441869, 0, 6, 1441869, 8, 6, 1441869, 8, 4, 1441869, 8, 2, 1441869, 8, 0, 1441869)
+}
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1.575, 4.2)
+shape = SubResource("BoxShape3D_q743y")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="torch_001" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, 8.4, 1.05, 2.1)
+
+[node name="torch_002" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, 8.4, 1.05, 4.2)
+
+[node name="torch_003" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, 8.4, 1.05, 6.3)
+
+[node name="torch_004" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, 0, 1.05, 2.1)
+
+[node name="torch_005" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, 0, 1.05, 4.2)
+
+[node name="torch_006" parent="Lights" instance=ExtResource("2_fr15q")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, 0, 1.05, 6.3)
+
+[node name="Door" parent="." instance=ExtResource("3_vlwy4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.2, 0, 8.368096)

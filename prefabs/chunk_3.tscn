@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://b25uv0j420yyv"]
+
+[ext_resource type="MeshLibrary" uid="uid://ou4i6ma4tkdm" path="res://assets/Free Modular Low Poly Dungeon by rgsdev/toles_occluder.tres" id="1_tnmrc"]
+[ext_resource type="PackedScene" uid="uid://dqdyvi86lls4j" path="res://prefabs/torch.tscn" id="2_ytwc0"]
+
+[node name="Chunk3" type="Node3D"]
+
+[node name="Floor" type="GridMap" parent="."]
+mesh_library = ExtResource("1_tnmrc")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65530, 65528, 14, 65530, 65530, 14, 65528, 65528, 14, 65528, 65530, 14, 65526, 65528, 14, 65524, 65528, 14, 65522, 65528, 14, 65522, 65530, 14, 65522, 65532, 14, 65522, 65534, 14, 65524, 65534, 14, 65524, 65532, 14, 65524, 65530, 14, 65526, 65530, 14, 262130, 65528, 14, 262130, 65530, 14, 262130, 65532, 14, 262130, 65534, 14, 262132, 65528, 14, 262132, 65530, 14, 262132, 65532, 14, 262132, 65534, 14, 262134, 65528, 14, 262134, 65530, 14, 262136, 65528, 14, 262136, 65530, 14, 262138, 65528, 14, 262138, 65530, 14)
+}
+metadata/_editor_floor_ = Vector3(0, 3, 0)
+
+[node name="HorizontalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_tnmrc")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65522, 65528, 77, 65524, 65528, 77, 65526, 65528, 77, 65528, 65528, 77, 65530, 65528, 77, 65526, 65532, 77, 65528, 65532, 77, 65530, 65532, 77)
+}
+
+[node name="VerticalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_tnmrc")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65522, 65528, 1441869, 65522, 65530, 1441869, 65522, 65532, 1441869, 65522, 65534, 1441869, 65526, 65532, 1441869, 65526, 65534, 1441869)
+}
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="torch_001" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -6.3, 1.05, -8.4)
+
+[node name="torch_002" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -8.4, 1.05, -8.4)
+
+[node name="torch_003" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -10.5, 1.05, -8.4)
+
+[node name="torch_004" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -12.6, 1.05, -8.4)
+
+[node name="torch_005" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -14.7, 1.05, -6.3)
+
+[node name="torch_006" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -14.7, 1.05, -4.2)
+
+[node name="torch_007" parent="Lights" instance=ExtResource("2_ytwc0")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -14.7, 1.05, -2.1)

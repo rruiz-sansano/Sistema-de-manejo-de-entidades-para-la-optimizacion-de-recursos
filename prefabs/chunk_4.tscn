@@ -1,0 +1,2322 @@
+[gd_scene load_steps=8 format=3 uid="uid://6uvc8t5dvhen"]
+
+[ext_resource type="Script" uid="uid://cijrgko11lhg3" path="res://scripts/chunk_4.gd" id="1_3euat"]
+[ext_resource type="MeshLibrary" uid="uid://ou4i6ma4tkdm" path="res://assets/Free Modular Low Poly Dungeon by rgsdev/toles_occluder.tres" id="1_dx5eo"]
+[ext_resource type="PackedScene" uid="uid://dsywljuixqyuj" path="res://prefabs/barrel.tscn" id="2_jibw3"]
+[ext_resource type="PackedScene" uid="uid://dme1jn0fifk3o" path="res://prefabs/full_shelf.tscn" id="3_00e06"]
+[ext_resource type="PackedScene" uid="uid://dqdyvi86lls4j" path="res://prefabs/torch.tscn" id="4_00e06"]
+[ext_resource type="PackedScene" uid="uid://cgq7pqd1k55r1" path="res://prefabs/drawer.tscn" id="5_wmhgq"]
+[ext_resource type="PackedScene" uid="uid://d3cflbyjp15mv" path="res://prefabs/key_001.tscn" id="6_3euat"]
+
+[node name="Chunk4" type="Node3D"]
+script = ExtResource("1_3euat")
+
+[node name="Floor" type="GridMap" parent="."]
+mesh_library = ExtResource("1_dx5eo")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65520, 0, 14, 65522, 0, 14, 65524, 0, 14, 65526, 0, 14, 65520, 2, 14, 65522, 2, 14, 65524, 2, 14, 65526, 2, 14, 65520, 4, 14, 65522, 4, 14, 65524, 4, 14, 65526, 4, 14, 65520, 6, 14, 65522, 6, 14, 65524, 6, 14, 65526, 6, 14, 262128, 0, 14, 262128, 2, 14, 262128, 4, 14, 262128, 6, 14, 262130, 0, 14, 262130, 2, 14, 262130, 4, 14, 262130, 6, 14, 262132, 0, 14, 262132, 2, 14, 262132, 4, 14, 262132, 6, 14, 262134, 0, 14, 262134, 2, 14, 262134, 4, 14, 262134, 6, 14)
+}
+metadata/_editor_floor_ = Vector3(0, 3, 0)
+
+[node name="HorizontalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_dx5eo")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65520, 0, 77, 65526, 0, 77, 65520, 8, 77, 65522, 8, 77, 65524, 8, 77, 65526, 8, 77)
+}
+
+[node name="VerticalWalls" type="GridMap" parent="."]
+mesh_library = ExtResource("1_dx5eo")
+cell_size = Vector3(1.05, 1.05, 1.05)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65520, 0, 1441869, 65520, 2, 1441869, 65520, 4, 1441869, 65520, 6, 1441869, 65528, 6, 1441869, 65528, 4, 1441869, 65528, 2, 1441869, 65528, 0, 1441869)
+}
+
+[node name="Barrels" type="Node3D" parent="."]
+
+[node name="Cluster" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster2" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster2" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster3" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster3" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster4" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster4" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster5" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster5" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster6" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster6" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster7" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster7" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster8" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster8" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster9" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster9" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster10" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster10" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster11" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster11" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster12" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster12" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster13" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster13" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster15" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster15" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster16" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster16" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster17" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster17" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster18" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster18" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster19" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster19" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster20" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster20" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster22" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster22" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster23" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster23" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster24" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster24" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster25" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster25" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster26" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster26" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster27" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster27" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster28" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster28" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster29" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster29" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster30" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster30" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster31" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster31" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster32" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster32" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster33" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster33" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster34" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster34" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster35" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster35" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster36" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster36" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster37" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster37" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster38" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster38" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster39" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster39" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster40" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster40" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster41" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster41" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster42" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster42" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster14" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster14" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster21" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster21" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster43" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster43" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster44" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster44" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster45" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster45" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster46" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster46" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster47" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster47" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster48" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster48" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster49" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster49" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster50" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster50" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster51" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster51" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster52" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster52" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster53" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.55, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster53" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster54" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster54" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster55" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster55" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster56" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster56" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster57" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster57" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster58" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster58" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster59" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.65, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster59" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster60" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster60" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster61" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster61" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster62" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster62" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster63" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster63" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster64" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster64" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster65" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster65" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster66" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster66" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster67" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster67" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster68" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster68" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster69" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster69" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster70" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster70" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster71" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster71" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster72" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster72" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster73" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster73" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster74" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 1.05)
+
+[node name="Barrel" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster74" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster75" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 2.1)
+
+[node name="Barrel" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster75" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster76" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 3.15)
+
+[node name="Barrel" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster76" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster77" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 4.2)
+
+[node name="Barrel" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster77" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster78" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 5.25)
+
+[node name="Barrel" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster78" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster79" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 6.3)
+
+[node name="Barrel" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster79" instance=ExtResource("2_jibw3")]
+
+[node name="Cluster80" type="Node3D" parent="Barrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 0, 7.35)
+
+[node name="Barrel" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel2" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel3" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel4" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel5" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel6" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel7" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel8" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel9" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Barrel10" parent="Barrels/Cluster80" instance=ExtResource("2_jibw3")]
+
+[node name="Shelves" type="Node3D" parent="."]
+
+[node name="Cluster" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 1.05)
+
+[node name="FullShelf" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster" instance=ExtResource("3_00e06")]
+
+[node name="Cluster2" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 3.15)
+
+[node name="FullShelf" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster2" instance=ExtResource("3_00e06")]
+
+[node name="Cluster3" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 5.25)
+
+[node name="FullShelf" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster3" instance=ExtResource("3_00e06")]
+
+[node name="Cluster4" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 7.35)
+
+[node name="FullShelf" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster4" instance=ExtResource("3_00e06")]
+
+[node name="Cluster5" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 1.05)
+
+[node name="FullShelf" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster5" instance=ExtResource("3_00e06")]
+
+[node name="Cluster6" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 3.15)
+
+[node name="FullShelf" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster6" instance=ExtResource("3_00e06")]
+
+[node name="Cluster7" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 5.25)
+
+[node name="FullShelf" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster7" instance=ExtResource("3_00e06")]
+
+[node name="Cluster8" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 7.35)
+
+[node name="FullShelf" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster8" instance=ExtResource("3_00e06")]
+
+[node name="Cluster9" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 1.05)
+
+[node name="FullShelf" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster9" instance=ExtResource("3_00e06")]
+
+[node name="Cluster10" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 3.15)
+
+[node name="FullShelf" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster10" instance=ExtResource("3_00e06")]
+
+[node name="Cluster11" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 5.25)
+
+[node name="FullShelf" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster11" instance=ExtResource("3_00e06")]
+
+[node name="Cluster12" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.863, 0, 7.35)
+
+[node name="FullShelf" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster12" instance=ExtResource("3_00e06")]
+
+[node name="Cluster13" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 1.05)
+
+[node name="FullShelf" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster13" instance=ExtResource("3_00e06")]
+
+[node name="Cluster14" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 3.15)
+
+[node name="FullShelf" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster14" instance=ExtResource("3_00e06")]
+
+[node name="Cluster15" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 5.25)
+
+[node name="FullShelf" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster15" instance=ExtResource("3_00e06")]
+
+[node name="Cluster16" type="Node3D" parent="Shelves"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.307835, 0, 7.35)
+
+[node name="FullShelf" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf2" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf3" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf4" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf5" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf6" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf7" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf8" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf9" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="FullShelf10" parent="Shelves/Cluster16" instance=ExtResource("3_00e06")]
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="torch_001" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, -8.4, 1.05, 2.1)
+
+[node name="torch_002" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, -8.4, 1.05, 4.2)
+
+[node name="torch_003" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, 100, 4.371139e-06, 0, -4.371139e-06, 100, 100, 4.371139e-06, 1.9106854e-13, -8.4, 1.05, 6.3)
+
+[node name="torch_004" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -16.8, 1.05, 2.1)
+
+[node name="torch_005" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -16.8, 1.05, 4.2)
+
+[node name="torch_006" parent="Lights" instance=ExtResource("4_00e06")]
+transform = Transform3D(-4.371139e-06, -100, -4.371139e-06, 0, -4.371139e-06, 100, -100, 4.371139e-06, 1.9106854e-13, -16.8, 1.05, 6.3)
+
+[node name="drawer" parent="." instance=ExtResource("5_wmhgq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.6, 0, 7.35)
+
+[node name="Key_001" parent="." instance=ExtResource("6_3euat")]
+transform = Transform3D(84.68529, 0, 53.18273, 0, 100, 0, -53.18273, 0, 84.68529, -12.6, 0.8977752, 7.35)
+
+[node name="Objectives" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Objectives"]
+
+[node name="Control" type="Control" parent="Objectives/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PickedUp" type="Label" parent="Objectives/CanvasLayer/Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -11.5
+offset_right = 195.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "I picked up the key. I need to go back to the door..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Objectives"]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Objectives/Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bga1yr77u17km"]
+
+[ext_resource type="PackedScene" uid="uid://drksswvfd40ht" path="res://prefabs/chest's_gold.tscn" id="1_5xlvm"]
+[ext_resource type="PackedScene" uid="uid://52dfpmrsrwub" path="res://prefabs/chest_bottom.tscn" id="2_8jwji"]
+[ext_resource type="PackedScene" uid="uid://d11uqnbh71nd7" path="res://prefabs/chest_top.tscn" id="3_ibynp"]
+
+[node name="Chest" type="Node3D"]
+
+[node name="chest\'s gold" parent="." instance=ExtResource("1_5xlvm")]
+transform = Transform3D(100, 0, 0, 0, 1.1924881e-06, 100, 0, -100, 1.1924881e-06, 0, 0.43344957, 0.06473291)
+
+[node name="chest bottom" parent="." instance=ExtResource("2_8jwji")]
+transform = Transform3D(100, 0, 0, 0, 1.1924881e-06, 100, 0, -100, 1.1924881e-06, 0, 0.43344957, 0.06473291)
+
+[node name="chest top" parent="." instance=ExtResource("3_ibynp")]
+transform = Transform3D(100, 0, 0, 0, -73.25428, 68.07208, 0, -68.07208, -73.25428, 0, 0.4003526, -0.4647345)
