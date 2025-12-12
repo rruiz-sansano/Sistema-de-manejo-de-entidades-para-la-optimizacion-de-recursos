@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=4 uid="uid://deyvu4t8r157e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n7jc"]
+resource_name = "grey"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.435294, 0.490196, 0.615686, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rb64a"]
+_surfaces = [{
+"aabb": AABB(0, -0.0210619, -0.002, 0.0210619, 0.0210619, 0.002),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQABwAGAAIAAgABAAcABgAFAAMAAwACAAYABQAEAAAAAAADAAUABAAHAAEAAQAAAAQA"),
+"name": "grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AYqsPAAAAAAAAAAAAYqsPAGKrLwAAAAAAAAAAAGKrLwAAAAAAAAAAAAAAAAAAAAAAYqsPAAAAABvEgO7AAAAAAAAAABvEgO7AAAAAAGKrLxvEgO7AYqsPAGKrLxvEgO7")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w3xwm"]
+resource_name = "Plane_004"
+_surfaces = [{
+"aabb": AABB(0, -0.0210619, -0.002, 0.0210619, 0.0210619, 0.002),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_5n7jc"),
+"name": "grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AYqsPAAAAAAAAAAAAYqsPAGKrLwAAAAAAAAAAAGKrLwAAAAAAAAAAAAAAAAAAAAAAYqsPAAAAABvEgO7AAAAAAAAAABvEgO7AAAAAAGKrLxvEgO7AYqsPAGKrLxvEgO7AYqsPAGKrLxvEgO7AAAAAAGKrLxvEgO7AAAAAAGKrLwAAAAAAYqsPAGKrLwAAAAAAAAAAAGKrLxvEgO7AAAAAAAAAABvEgO7AAAAAAAAAAAAAAAAAAAAAAGKrLwAAAAAAAAAAAAAAABvEgO7AYqsPAAAAABvEgO7AYqsPAAAAAAAAAAAAAAAAAAAAAAAAAAAAYqsPAAAAABvEgO7AYqsPAGKrLxvEgO7AYqsPAGKrLwAAAAAAYqsPAAAAAAAAAAA/3//f////z//f/9/////P/9//3////8//3//f////z//////////v/////////+//////////7//////////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//f///////v/9///////+//3///////7//f///////v////3////+/////f////7////9/////v////3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rb64a")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1eo4"]
+size = Vector3(2.10602, 2.1061, 0.199768)
+
+[node name="floor" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w3xwm")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0105303, -0.0105342, -0.000999451)
+shape = SubResource("BoxShape3D_d1eo4")

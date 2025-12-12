@@ -1,0 +1,141 @@
+[gd_scene load_steps=14 format=3 uid="uid://brf3v86dv3yr8"]
+
+[ext_resource type="PackedScene" uid="uid://brdun5vihoquv" path="res://prefabs/pillar.tscn" id="1_lg1lp"]
+[ext_resource type="Script" uid="uid://dbi3utikm3vm0" path="res://scripts/end_building.gd" id="1_r612b"]
+[ext_resource type="PackedScene" uid="uid://bga1yr77u17km" path="res://prefabs/chest.tscn" id="2_qrudb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qrudb"]
+size = Vector3(6, 0.1, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r612b"]
+albedo_color = Color(0.43137255, 0.49019608, 0.6117647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r612b"]
+size = Vector3(0.8, 3.1, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ft5l7"]
+albedo_color = Color(0.43137255, 0.49019608, 0.6117647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xsvh"]
+albedo_color = Color(0.43137255, 0.49019608, 0.6117647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c84po"]
+albedo_color = Color(0.43137255, 0.49019608, 0.6117647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p25cv"]
+albedo_color = Color(0.43137255, 0.49019608, 0.6117647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2j3s0"]
+size = Vector3(1.3, 1.2, 1.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crcew"]
+albedo_color = Color(0.6509804, 0.4, 0.1882353, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s3del"]
+size = Vector3(2, 2, 2)
+
+[node name="EndBuilding" type="Node3D"]
+script = ExtResource("1_r612b")
+
+[node name="CloseMesh" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Floor" type="MeshInstance3D" parent="CloseMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+visibility_range_end = 25.0
+mesh = SubResource("BoxMesh_qrudb")
+surface_material_override/0 = SubResource("StandardMaterial3D_r612b")
+
+[node name="Ceiling" type="MeshInstance3D" parent="CloseMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 0)
+visibility_range_end = 25.0
+mesh = SubResource("BoxMesh_qrudb")
+surface_material_override/0 = SubResource("StandardMaterial3D_r612b")
+
+[node name="pillar" parent="CloseMesh" instance=ExtResource("1_lg1lp")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -2, 0, -2)
+visibility_range_end = 25.0
+
+[node name="pillar2" parent="CloseMesh" instance=ExtResource("1_lg1lp")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 2, 0, -2)
+visibility_range_end = 25.0
+
+[node name="pillar3" parent="CloseMesh" instance=ExtResource("1_lg1lp")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -2, 0, 2)
+visibility_range_end = 25.0
+
+[node name="pillar4" parent="CloseMesh" instance=ExtResource("1_lg1lp")]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 2, 0, 2)
+visibility_range_end = 25.0
+
+[node name="Chest" parent="CloseMesh" instance=ExtResource("2_qrudb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="chest\'s gold" parent="CloseMesh/Chest" index="0"]
+visibility_range_end = 25.0
+
+[node name="chest bottom" parent="CloseMesh/Chest" index="1"]
+visibility_range_end = 25.0
+
+[node name="chest top" parent="CloseMesh/Chest" index="2"]
+visibility_range_end = 25.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CloseMesh/Chest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679, 0)
+light_color = Color(1, 1, 0, 1)
+
+[node name="MidMesh" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Floor" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_qrudb")
+surface_material_override/0 = SubResource("StandardMaterial3D_r612b")
+
+[node name="Ceiling" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 0)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_qrudb")
+surface_material_override/0 = SubResource("StandardMaterial3D_r612b")
+
+[node name="Pillar" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.55, -2)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_r612b")
+surface_material_override/0 = SubResource("StandardMaterial3D_ft5l7")
+
+[node name="Pillar2" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.55, -2)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_r612b")
+surface_material_override/0 = SubResource("StandardMaterial3D_7xsvh")
+
+[node name="Pillar3" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.55, 2)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_r612b")
+surface_material_override/0 = SubResource("StandardMaterial3D_c84po")
+
+[node name="Pillar4" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.55, 2)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_r612b")
+surface_material_override/0 = SubResource("StandardMaterial3D_p25cv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MidMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+visibility_range_begin = 25.0
+mesh = SubResource("BoxMesh_2j3s0")
+surface_material_override/0 = SubResource("StandardMaterial3D_crcew")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("BoxShape3D_s3del")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="CloseMesh/Chest"]

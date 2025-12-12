@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dygxjfksaes6f"]
+
+[ext_resource type="PackedScene" uid="uid://badodll41tjtx" path="res://prefabs/chunk_1.tscn" id="1_mmlbs"]
+[ext_resource type="PackedScene" uid="uid://vg614htpat02" path="res://prefabs/chunk_2.tscn" id="2_we4ec"]
+[ext_resource type="PackedScene" uid="uid://b25uv0j420yyv" path="res://prefabs/chunk_3.tscn" id="3_xlp02"]
+[ext_resource type="PackedScene" uid="uid://6uvc8t5dvhen" path="res://prefabs/chunk_4.tscn" id="4_xktvw"]
+
+[node name="MapChunk" type="Node3D"]
+
+[node name="Chunk1" parent="." instance=ExtResource("1_mmlbs")]
+
+[node name="Chunk2" parent="." instance=ExtResource("2_we4ec")]
+
+[node name="Chunk3" parent="." instance=ExtResource("3_xlp02")]
+
+[node name="Chunk4" parent="." instance=ExtResource("4_xktvw")]

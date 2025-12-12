@@ -1,0 +1,363 @@
+[gd_scene load_steps=6 format=3 uid="uid://52pxxse5xi8b"]
+
+[ext_resource type="PackedScene" uid="uid://qkg0ss1r800" path="res://prefabs/ForestTile.tscn" id="1_acwhl"]
+[ext_resource type="PackedScene" uid="uid://brf3v86dv3yr8" path="res://prefabs/end_building.tscn" id="2_2o5tu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2o5tu"]
+size = Vector2(144, 192)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iceen"]
+albedo_color = Color(0.41568628, 0.62352943, 0.4627451, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_acwhl"]
+size = Vector3(144, 1, 192)
+
+[node name="MapLOD" type="Node3D"]
+
+[node name="Forest" type="Node3D" parent="."]
+
+[node name="ForestColumn" type="Node3D" parent="Forest"]
+
+[node name="ForestTile10" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn2" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn2" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn3" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn3" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn4" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn4" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn9" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile6" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn9" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn5" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn5" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn6" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn6" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn7" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn7" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="ForestColumn8" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 0, 0)
+
+[node name="ForestTile10" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="ForestTile11" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
+
+[node name="ForestTile12" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -112)
+
+[node name="ForestTile" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="ForestTile2" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+
+[node name="ForestTile3" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="ForestTile4" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="ForestTile5" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+
+[node name="ForestTile6" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="ForestTile7" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="ForestTile8" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="ForestTile9" parent="Forest/ForestColumn8" instance=ExtResource("1_acwhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="Floor" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 0)
+mesh = SubResource("PlaneMesh_2o5tu")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_iceen")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, -0.5, 0)
+shape = SubResource("BoxShape3D_acwhl")
+
+[node name="EndBuilding" parent="." instance=ExtResource("2_2o5tu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, -40)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ogyc4up1ulvv"]
+
+[ext_resource type="Script" uid="uid://vyk3r4vowgle" path="res://scripts/lance_trap.gd" id="1_pdvut"]
+
+[node name="LanceTrap" type="Node3D"]
+script = ExtResource("1_pdvut")
+
+[node name="Start" type="Timer" parent="."]
+one_shot = true
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Cadence" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Start" to="." method="_on_start_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Cadence" to="." method="_on_cadence_timeout"]
