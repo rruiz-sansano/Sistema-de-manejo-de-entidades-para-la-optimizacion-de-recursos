@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk3ouh8qrtoag"]
+
+[ext_resource type="PackedScene" uid="uid://52pxxse5xi8b" path="res://prefabs/map_lod.tscn" id="1_tjffx"]
+[ext_resource type="PackedScene" uid="uid://vqahqmap0y3y" path="res://prefabs/test_player.tscn" id="2_4yiem"]
+[ext_resource type="Script" uid="uid://bhf11rems8k2x" path="res://scripts/objectives.gd" id="3_4yiem"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_tjffx"]
+rayleigh_color = Color(1, 0.56078434, 0.21960784, 1)
+mie_color = Color(1, 0.96862745, 0, 1)
+ground_color = Color(1, 0.6745098, 0.07450981, 1)
+
+[sub_resource type="Sky" id="Sky_4yiem"]
+sky_material = SubResource("PhysicalSkyMaterial_tjffx")
+
+[sub_resource type="Environment" id="Environment_s2g7t"]
+background_mode = 2
+sky = SubResource("Sky_4yiem")
+ambient_light_source = 3
+ambient_light_color = Color(1, 0.8352941, 0, 1)
+
+[node name="WorldLOD" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s2g7t")
+
+[node name="Sky" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.371139e-08, -0.67172056, 0.7408046, 0, 0.7408046, 0.67172056, -1, 2.936184e-08, -3.23816e-08, 0, 33.807343, 0)
+light_color = Color(1, 0.85882354, 0, 1)
+light_energy = 3.474
+
+[node name="MapLOD" parent="." instance=ExtResource("1_tjffx")]
+
+[node name="Player" parent="." instance=ExtResource("2_4yiem")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 0)
+
+[node name="Objectives" type="Node3D" parent="."]
+script = ExtResource("3_4yiem")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Objectives"]
+
+[node name="Control" type="Control" parent="Objectives/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Objective" type="Label" parent="Objectives/CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -11.5
+offset_right = 195.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Obtén el cofre del tesoro."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Objectives"]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Objectives/Timer" to="Objectives" method="_on_timer_timeout"]

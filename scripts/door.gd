@@ -1,0 +1,18 @@
+extends Node3D
+
+
+func _on_area_3d_body_entered(_body):
+	if Global.pickup:
+		Global.pickup = false
+		var file1 = FileAccess.open("user://chunk_fps_data.csv", FileAccess.WRITE)
+		file1.store_string(Global.fps_data)
+		file1.close()
+		var file2 = FileAccess.open("user://chunk_ent_data.csv", FileAccess.WRITE)
+		file2.store_string(Global.ent_data)
+		file2.close()
+		var file3 = FileAccess.open("user://chunk_draw_data.csv", FileAccess.WRITE)
+		file3.store_string(Global.draw_data)
+		file3.close()
+		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+		Global.entities = 0
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/menu.tscn")

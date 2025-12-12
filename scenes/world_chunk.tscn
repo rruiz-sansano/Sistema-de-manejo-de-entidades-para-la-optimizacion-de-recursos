@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://jpyn2fpka5li"]
+
+[ext_resource type="Script" uid="uid://bvlpc7q4st6po" path="res://scripts/world_chunk.gd" id="1_ipgjs"]
+[ext_resource type="PackedScene" uid="uid://badodll41tjtx" path="res://prefabs/chunk_1.tscn" id="2_gthy8"]
+[ext_resource type="PackedScene" uid="uid://vg614htpat02" path="res://prefabs/chunk_2.tscn" id="3_s682b"]
+[ext_resource type="PackedScene" uid="uid://vqahqmap0y3y" path="res://prefabs/test_player.tscn" id="4_hqg1x"]
+[ext_resource type="Script" uid="uid://bhf11rems8k2x" path="res://scripts/objectives.gd" id="5_s682b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gthy8"]
+size = Vector3(8.4, 3.15, 8.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s682b"]
+size = Vector3(10.5, 3.15, 8.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqg1x"]
+size = Vector3(10.5, 3.15, 8.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmyoj"]
+size = Vector3(8.4, 3.15, 8.4)
+
+[node name="WorldChunk" type="Node3D"]
+script = ExtResource("1_ipgjs")
+
+[node name="Chunk1" parent="." instance=ExtResource("2_gthy8")]
+
+[node name="Chunk2" parent="." instance=ExtResource("3_s682b")]
+
+[node name="Player" parent="." instance=ExtResource("4_hqg1x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.2, 0, 4.2)
+
+[node name="AreaA" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1.575, 4.2)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaA"]
+shape = SubResource("BoxShape3D_gthy8")
+
+[node name="AreaB" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 1.575, -4.2)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaB"]
+shape = SubResource("BoxShape3D_s682b")
+
+[node name="AreaC" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45, 1.575, -4.2)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaC"]
+shape = SubResource("BoxShape3D_hqg1x")
+
+[node name="AreaD" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.575, 4.2)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaD"]
+shape = SubResource("BoxShape3D_vmyoj")
+
+[node name="Objectives" type="Node3D" parent="."]
+script = ExtResource("5_s682b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Objectives"]
+
+[node name="Control" type="Control" parent="Objectives/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Objective" type="Label" parent="Objectives/CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -11.5
+offset_right = 195.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "The door is locked. I need to find a key..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Objectives"]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="AreaA" to="." method="_on_area_a_body_entered"]
+[connection signal="body_exited" from="AreaA" to="." method="_on_area_a_body_exited"]
+[connection signal="body_entered" from="AreaB" to="." method="_on_area_b_body_entered"]
+[connection signal="body_exited" from="AreaB" to="." method="_on_area_b_body_exited"]
+[connection signal="body_entered" from="AreaC" to="." method="_on_area_c_body_entered"]
+[connection signal="body_exited" from="AreaC" to="." method="_on_area_c_body_exited"]
+[connection signal="body_entered" from="AreaD" to="." method="_on_area_d_body_entered"]
+[connection signal="body_exited" from="AreaD" to="." method="_on_area_d_body_exited"]
+[connection signal="timeout" from="Objectives/Timer" to="Objectives" method="_on_timer_timeout"]
