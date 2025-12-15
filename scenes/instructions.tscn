@@ -35,9 +35,11 @@ apretar el botón \"Jugar\".
 
 Dentro de la experiencia:
 	-WASD para el movimiento
--Barra espaciadora para saltar
+	-Barra espaciadora para saltar
 	-Mouse para controlar la cámara
--ESC para volver al menú"
+	-F11 para activar/desactivar la pan-
+	talla completa
+	-ESC para volver al menú"
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
