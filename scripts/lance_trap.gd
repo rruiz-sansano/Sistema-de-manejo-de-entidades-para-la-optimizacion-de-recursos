@@ -82,7 +82,6 @@ func hide_throw():
 func _on_start_timeout():
 	throw()
 	throwed += 1
-	print(throwed)
 	if throwed >= burst:
 		throwed = 0
 		$Cooldown.start()
@@ -92,7 +91,6 @@ func _on_start_timeout():
 func _on_cadence_timeout():
 	throw()
 	throwed += 1
-	print(throwed)
 	if throwed >= burst:
 		throwed = 0
 		$Cooldown.start()
@@ -102,7 +100,6 @@ func _on_cadence_timeout():
 func _on_cooldown_timeout():
 	throw()
 	throwed += 1
-	print(throwed)
 	if throwed >= burst:
 		throwed = 0
 		$Cooldown.start()
