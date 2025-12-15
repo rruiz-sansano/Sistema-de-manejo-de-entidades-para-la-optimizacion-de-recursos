@@ -5,4 +5,4 @@ El objetivo de este trabajo de título es un sistema de 4 experiencias que muest
 
 Para revisar el proyecto es necesario tener Godots 4.5 (a menos que haya una actualización importante debería ser compatible con versiones posteriores). Luego, basta con importar este repositorio y abrir el proyecto.
 
-Se incluye el ejecutable, llamado "test.exe" del proyecto para fácil acceso.
+Se incluye el ejecutable del proyecto, llamado "test.exe", para su fácil acceso.
