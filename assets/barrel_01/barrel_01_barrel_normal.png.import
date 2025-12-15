@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://kkw8sc6qcwjc"
+path.s3tc="res://.godot/imported/barrel_01_barrel_normal.png-a8530b7a3248f3b4238c9b5cdbef6b22.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c49e48994345b22dd03a124291402702"
+}
+
+[deps]
+
+source_file="res://assets/barrel_01/barrel_01_barrel_normal.png"
+dest_files=["res://.godot/imported/barrel_01_barrel_normal.png-a8530b7a3248f3b4238c9b5cdbef6b22.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/barrel_01/barrel_01_barrel_normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

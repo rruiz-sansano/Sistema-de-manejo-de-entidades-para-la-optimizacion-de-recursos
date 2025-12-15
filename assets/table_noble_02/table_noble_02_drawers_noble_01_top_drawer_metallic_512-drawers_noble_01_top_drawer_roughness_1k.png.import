@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ch56c0d3fgcgw"
+path.s3tc="res://.godot/imported/table_noble_02_drawers_noble_01_top_drawer_metallic_512-drawers_noble_01_top_drawer_roughness_1k.png-082aa1643f557f1264d52d55ca46f0db.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "685a9043edcec251a74ac6d8318b0b9b"
+}
+
+[deps]
+
+source_file="res://assets/table_noble_02/table_noble_02_drawers_noble_01_top_drawer_metallic_512-drawers_noble_01_top_drawer_roughness_1k.png"
+dest_files=["res://.godot/imported/table_noble_02_drawers_noble_01_top_drawer_metallic_512-drawers_noble_01_top_drawer_roughness_1k.png-082aa1643f557f1264d52d55ca46f0db.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
